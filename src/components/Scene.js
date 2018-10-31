@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Parallax from 'parallax-js';
 import styled from 'styled-components';
 
-import motion from '../helpers/tilt';
+import deviceMotionHandler from '../helpers/deviceMotion';
 
 /* Images */
 import Layer01 from '../images/scene_01/layer_01.png';
@@ -51,16 +51,16 @@ class Scene extends Component {
     document.getElementById('scene').style.left = 0;
     document.getElementById('scene').style.top = 0;
 
-    // Initialize Parallax.js
+    // Initialize Parallax.js.
     var scene = document.getElementById('scene');
     new Parallax(scene, {
       limitX: false,
     });
 
-    // Initialize DeviceMotion
+    // Handle DeviceMotionEvent.
     localStorage.clear();
     if (window.DeviceMotionEvent) {
-      window.addEventListener("devicemotion", motion, false);
+      window.addEventListener('devicemotion', deviceMotionHandler, false);
     } else {
       alert('Tilt is not supported on your current device. Try this page on your mobile device?');
     }

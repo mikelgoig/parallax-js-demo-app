@@ -1,4 +1,4 @@
-const motion = (event) => {
+const deviceMotion = (event) => {
 	const leftRight = event.accelerationIncludingGravity.x;
 	const topBottom = event.accelerationIncludingGravity.y;
 
@@ -16,7 +16,6 @@ const motion = (event) => {
 		localStorage.setItem('presety', yPreset);
 		localStorage.setItem('presetx', xPreset);
 		return false;
-		// next motion event will get executed (I guess we could potentially execute this one aswell...
 	} else {
 		if (preMoveY < 0) {
 			moveY = parseInt(preMoveY) + Math.abs(parseInt(keyY));
@@ -69,4 +68,4 @@ const motion = (event) => {
   }
 }
 
-export default motion;
+export default deviceMotion;

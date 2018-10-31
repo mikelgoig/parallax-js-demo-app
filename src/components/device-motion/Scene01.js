@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import Parallax from 'parallax-js';
 import styled from 'styled-components';
 
-import deviceMotionHandler from '../helpers/deviceMotion';
+/* Helpers */
+import deviceMotion from '../../helpers/deviceMotion';
 
 /* Images */
-import Layer01 from '../images/scene_01/layer_01.png';
-import Layer02 from '../images/scene_01/layer_02.png';
-import Layer03 from '../images/scene_01/layer_03.png';
-import Layer04 from '../images/scene_01/layer_04.png';
-import Layer05 from '../images/scene_01/layer_05.png';
+import Layer01 from '../../images/scene-01/layer-01.png';
+import Layer02 from '../../images/scene-01/layer-02.png';
+import Layer03 from '../../images/scene-01/layer-03.png';
+import Layer04 from '../../images/scene-01/layer-04.png';
+import Layer05 from '../../images/scene-01/layer-05.png';
 
+/* Styled Components */
 const Wrapper = styled.div`
   position: fixed;
   height: 100vh;
@@ -60,7 +62,7 @@ class Scene extends Component {
     // Handle DeviceMotionEvent.
     localStorage.clear();
     if (window.DeviceMotionEvent) {
-      window.addEventListener('devicemotion', deviceMotionHandler, false);
+      window.addEventListener('devicemotion', deviceMotion, false);
     } else {
       alert('Tilt is not supported on your current device. Try this page on your mobile device?');
     }

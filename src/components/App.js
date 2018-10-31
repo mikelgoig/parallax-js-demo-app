@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 /* Components */
-import Scene from './Scene';
+import Scene01 from './device-orientation/Scene01';
 
 class App extends Component {
   render() {
     return (
-      <Scene />
+      <Scene01 />
     );
   }
 }

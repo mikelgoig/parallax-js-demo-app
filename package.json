@@ -2,6 +2,10 @@
   "name": "parallax-js-demo-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.11.3",
+    "npm": "6.4.1"
+  },
   "dependencies": {
     "fullpage.js": "^3.0.3",
     "parallax-js": "^3.1.0",

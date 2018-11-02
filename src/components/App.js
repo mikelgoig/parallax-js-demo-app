@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import fullpage from 'fullpage.js';
 
+/* Components */
+import Scene from './device-orientation/Scene';
+
 /* Scene 01 */
 import layer0101 from '../images/scene-01/layer-01.png';
 import layer0102 from '../images/scene-01/layer-02.png';
@@ -27,23 +30,49 @@ import layer0306 from '../images/scene-03/layer-06.png';
 import layer0307 from '../images/scene-03/layer-07.png';
 import layer0308 from '../images/scene-03/layer-08.png';
 
-/* Components */
-import Scene from './device-orientation/Scene';
-
 class App extends Component {
   render() {
     return (
       <div id="fullpage">
         <div className="section">
-          <Scene layers={[layer0101, layer0102, layer0103, layer0104, layer0105]}/>
+          <Scene
+            layers={[
+              layer0101,
+              layer0102,
+              layer0103,
+              layer0104,
+              layer0105,
+            ]}
+          />
         </div>
 
         <div className="section">
-          <Scene layers={[layer0201, layer0202, layer0203, layer0204, layer0205, layer0206, layer0207]}/>
+          <Scene
+            layers={[
+              layer0201,
+              layer0202,
+              layer0203,
+              layer0204,
+              layer0205,
+              layer0206,
+              layer0207,
+            ]}
+          />
         </div>
 
         <div className="section">
-          <Scene layers={[layer0301, layer0302, layer0303, layer0304, layer0305, layer0306, layer0307, layer0308]}/>
+          <Scene
+            layers={[
+              layer0301,
+              layer0302,
+              layer0303,
+              layer0304,
+              layer0305,
+              layer0306,
+              layer0307,
+              layer0308,
+            ]}
+          />
         </div>
       </div>
     );

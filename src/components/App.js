@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import fullpage from 'fullpage.js';
+import styled from 'styled-components';
 
 /* Components */
-import Scene from './device-orientation/Scene';
+import Scene from './Scene';
 
 /* Scene 01 */
 import layer0101 from '../images/scene-01/layer-01.png';
@@ -30,49 +31,119 @@ import layer0306 from '../images/scene-03/layer-06.png';
 import layer0307 from '../images/scene-03/layer-07.png';
 import layer0308 from '../images/scene-03/layer-08.png';
 
+/* Styled Components */
+const ButtonsWrapper = styled.div`
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  z-index: 1;
+`;
+const Button = styled.button`
+  min-height: 60px;
+  margin-right: 10px;
+  background-color: ${props => props.background};
+  opacity: 0.8;
+`;
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isEnabledDeviceOrientation: false,
+      isEnabledDeviceMotion: false,
+    };
+
+    this.toggleDeviceMotion = this.toggleDeviceMotion.bind(this);
+    this.toggleDeviceOrientation = this.toggleDeviceOrientation.bind(this);
+  }
+
+  toggleDeviceMotion() {
+    this.setState({
+      isEnabledDeviceMotion: !this.state.isEnabledDeviceMotion,
+    });
+  }
+
+  toggleDeviceOrientation() {
+    this.setState({
+      isEnabledDeviceOrientation: !this.state.isEnabledDeviceOrientation,
+    });
+  }
+
   render() {
     return (
-      <div id="fullpage">
-        <div className="section">
-          <Scene
-            layers={[
-              layer0101,
-              layer0102,
-              layer0103,
-              layer0104,
-              layer0105,
-            ]}
-          />
-        </div>
+      <div>
+        <ButtonsWrapper>
+          <Button
+            background={
+              this.state.isEnabledDeviceOrientation
+                ? 'green'
+                : 'white'
+            }
+            onClick={this.toggleDeviceOrientation}
+          >
+            Dev.Orientation
+          </Button>
 
-        <div className="section">
-          <Scene
-            layers={[
-              layer0201,
-              layer0202,
-              layer0203,
-              layer0204,
-              layer0205,
-              layer0206,
-              layer0207,
-            ]}
-          />
-        </div>
+          <Button
+            background={
+              this.state.isEnabledDeviceMotion
+                ? 'green'
+                : 'white'
+            }
+            onClick={this.toggleDeviceMotion}
+          >
+            Dev.Motion
+          </Button>
+        </ButtonsWrapper>
 
-        <div className="section">
-          <Scene
-            layers={[
-              layer0301,
-              layer0302,
-              layer0303,
-              layer0304,
-              layer0305,
-              layer0306,
-              layer0307,
-              layer0308,
-            ]}
-          />
+        <div id="fullpage">
+          <div className="section">
+            <Scene
+              isEnabledDeviceMotion={this.state.isEnabledDeviceMotion}
+              isEnabledDeviceOrientation={this.state.isEnabledDeviceOrientation}
+              layers={[
+                layer0101,
+                layer0102,
+                layer0103,
+                layer0104,
+                layer0105,
+              ]}
+            />
+          </div>
+
+          <div className="section">
+            <Scene
+              isEnabledDeviceMotion={this.state.isEnabledDeviceMotion}
+              isEnabledDeviceOrientation={this.state.isEnabledDeviceOrientation}
+              layers={[
+                layer0201,
+                layer0202,
+                layer0203,
+                layer0204,
+                layer0205,
+                layer0206,
+                layer0207,
+              ]}
+            />
+          </div>
+
+          <div className="section">
+            <Scene
+              isEnabledDeviceMotion={this.state.isEnabledDeviceMotion}
+              isEnabledDeviceOrientation={this.state.isEnabledDeviceOrientation}
+              layers={[
+                layer0301,
+                layer0302,
+                layer0303,
+                layer0304,
+                layer0305,
+                layer0306,
+                layer0307,
+                layer0308,
+              ]}
+            />
+          </div>
         </div>
       </div>
     );

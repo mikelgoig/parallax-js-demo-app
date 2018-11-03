@@ -132,7 +132,7 @@ class Scene extends Component {
 
           return (
             <div key={index} data-depth={depth}>
-              <Image src={layer} alt="" />
+              <Image data-src={layer} alt="" />
             </div>
           );
         })}

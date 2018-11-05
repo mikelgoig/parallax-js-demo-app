@@ -97,7 +97,7 @@ class Scene extends Component {
     }
 
     const xPos = this.scene.current.offsetLeft;
-    if ((xPos < -(this.state.imageWidth - window.innerWidth/2) && xSign === '-') || (xPos > 0 && xSign === '+')) {
+    if ((xPos < -(this.state.imageWidth - window.innerWidth) && xSign === '-') || (xPos > 0 && xSign === '+')) {
       // return false;
     } else {
       if (xSign === '-') {

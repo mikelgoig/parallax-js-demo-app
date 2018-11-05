@@ -1,41 +1,21 @@
+/* Vendor */
 import React, { Component } from 'react';
-import fullpage from 'fullpage.js';
 import styled from 'styled-components';
+import fullpage from 'fullpage.js';
 
 /* Components */
+import WelcomePage from './WelcomePage';
 import Scene from './Scene';
 
 /* Images */
-import welcome from '../images/welcome.jpg';
-import iconArrowDown from '../images/icon-arrow-down.png';
 const scene01 = (name) => require.context('../images/scene-01', true)(name, true);
 const scene02 = (name) => require.context('../images/scene-02', true)(name, true);
 const scene03 = (name) => require.context('../images/scene-03', true)(name, true);
 
 /* Styled Components */
-const WelcomePage = styled.div`
-  height: 100vh;
-  position: relative;
-  background-image: url(${props => props.image});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-`;
-const WelcomeButtonWrapper = styled.div`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 150px;
-  cursor: pointer;
-`;
-const WelcomeButton = styled.div`
-  width: 40px;
-  height: 40px;
-  margin: 0 auto;
-  background-image: url(${props => props.icon});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+const Wrapper = styled.div`
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
 `;
 const ButtonsWrapper = styled.div`
   display: ${props => props.display};
@@ -96,14 +76,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <Wrapper>
         <div id="fullpage">
           <div className="section">
-            <WelcomePage image={welcome}>
-              <WelcomeButtonWrapper onClick={this.moveSectionDown}>
-                <WelcomeButton icon={iconArrowDown}/>
-              </WelcomeButtonWrapper>
-            </WelcomePage>
+            <WelcomePage moveSectionDown={this.moveSectionDown}/>
           </div>
 
           <div className="section">
@@ -179,7 +155,7 @@ class App extends Component {
             Dev.Motion
           </Button>
         </ButtonsWrapper>
-      </div>
+      </Wrapper>
     );
   }
 }

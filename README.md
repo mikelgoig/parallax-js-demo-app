@@ -1,4 +1,46 @@
+# Paralla.js Demo App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Also, it makes use of these libraries:
+
+* [parallax.js](http://matthew.wagerfield.com/parallax/): to perform the parallax effect.
+* [fullpage.js](https://alvarotrigo.com/fullPage/): to perform jumps between scenes.
+
+And these browser events:
+
+* [Device Orientation Event](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent): to be able to use the mobile gyroscope.
+* [Device Motion Event](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent): to be able to use the mobile accelerometer.
+
+---
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- [nvm](https://github.com/creationix/nvm) >= 0.33.11
+
+### Installing and setting up the repository
+
+1. Clone the repository from GitHub:
+
+```bash
+git clone https://github.com/mgoigfer/parallax-js-demo-app.git <project-name> && cd <project-name> && rm -rf .git
+```
+
+2. Install [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/). The following `nvm` commands will install the Node.js at `.nvmrc`:
+
+```bash
+nvm install && npm install -g npm@6.4.1
+```
+
+3. Install [npm](https://www.npmjs.com/) dependencies:
+
+```bash
+npm install
+```
 
 ## Available Scripts
 
@@ -37,8 +79,12 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Create React App](https://github.com/facebook/create-react-app)
+- [parallax.js](http://matthew.wagerfield.com/parallax/)
+- [fullpage.js](https://alvarotrigo.com/fullPage/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Authors
+
+- **Mikel Goig** - [mgoigfer](https://github.com/mgoigfer)

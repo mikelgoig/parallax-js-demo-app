@@ -1,18 +1,4 @@
-# Paralla.js Demo App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-Also, it makes use of these libraries:
-
-* [parallax.js](http://matthew.wagerfield.com/parallax/): to perform the parallax effect.
-* [fullpage.js](https://alvarotrigo.com/fullPage/): to perform jumps between scenes.
-
-And these browser events:
-
-* [Device Orientation Event](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent): to be able to use the mobile gyroscope.
-* [Device Motion Event](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent): to be able to use the mobile accelerometer.
-
----
+# Parallax.js Demo App
 
 ## Getting Started
 
@@ -81,9 +67,17 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Built With
 
-- [Create React App](https://github.com/facebook/create-react-app)
-- [parallax.js](http://matthew.wagerfield.com/parallax/)
-- [fullpage.js](https://alvarotrigo.com/fullPage/)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Also, it makes use of these libraries:
+
+* [parallax.js](http://matthew.wagerfield.com/parallax/): to perform the parallax effect.
+* [fullpage.js](https://alvarotrigo.com/fullPage/): to perform jumps between scenes.
+
+And these browser events:
+
+* [Device Orientation Event](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent): to be able to use the mobile gyroscope.
+* [Device Motion Event](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent): to be able to use the mobile accelerometer.
 
 ## Authors
 
